@@ -1,9 +1,12 @@
 version 1.0
 
 import "sub_wfs/foo.wdl"
+import "../relative_imports.wdl" as relative
 
 workflow relative_imports {
   call foo.foo_wf
+  
+  call relative.relative_imports
 
   output {
     Int result = foo_wf.unpacked
