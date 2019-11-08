@@ -3,7 +3,7 @@ version 1.0
 import "https://raw.githubusercontent.com/ruchim/hello-world/master/workflows/hello/echo_hello" as echo
 
 workflow primary_wf {
-  echo.relative_imports {}
+  call echo.relative_imports {}
   
   output {
     Int relative_result = echo.relative_imports.result
