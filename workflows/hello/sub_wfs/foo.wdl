@@ -1,3 +1,5 @@
+version 1.0
+
 task lens {
   command {
     echo whatevs
