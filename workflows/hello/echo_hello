@@ -1,10 +1,10 @@
 version 1.0
 
-import "sub_wfs/foo.wdl"
+import "sub_wfs/foo.wdl" as sub_dir
 import "../relative_imports.wdl" as relative
 
 workflow relative_imports {
-  call foo.foo_wf
+  call sub_dir.foo
   
   call relative.relative_imports
 
