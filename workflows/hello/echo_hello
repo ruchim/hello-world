@@ -9,6 +9,6 @@ workflow relative_imports {
   call relative.relative_imports
 
   output {
-    Int result = foo_wf.unpacked
+    Int result = foo.unpacked
   }
 }
