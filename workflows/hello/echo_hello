@@ -4,11 +4,12 @@ import "sub_wfs/foo.wdl" as sub_dir
 import "../relative_imports.wdl" as relative
 
 workflow relative_imports {
-  call sub_dir.foo
+  call sub_dir.foo as foo_wf {}
   
-  call relative.relative_imports
+  call relative.relative_imports as relative_wf {}
 
   output {
-    Int result = foo.unpacked
+    Int result = foo_wf.someStringsLength
+    Int result2 = relative_wf.someIntsLength
   }
 }
